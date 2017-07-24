@@ -54,7 +54,7 @@ south_lat = 31.104
 
 该表格的`imshow()`图（如下）直观显了外环内公交站点的空间分布特征。
 
-![](img/bus-stop-distribution.png)
+![](https://github.com/getAbchin/datastore/blob/master/bus-stop-and-taxi-status/img/bus-stop-distribution.png?raw=true)
 
 ###### 2.3 载客/空车出租车数量统计
 
@@ -66,7 +66,7 @@ south_lat = 31.104
 
 12个表格的`imshow()`图（如下）直观显示了空车和载客出租车在时空上分布的走势。
 
-![](img/taxi-status-distribution.png)
+![](https://github.com/getAbchin/datastore/blob/master/bus-stop-and-taxi-status/img/taxi-status-distribution.png?raw=true)
 
 注：以上经纬度坐标系均为 [WGS84](https://en.wikipedia.org/wiki/World_Geodetic_System#A_new_World_Geodetic_System:_WGS_84)。
 
@@ -80,5 +80,5 @@ Lon-lats from the source is using Chinese 'Martian' Coordinate Reference System 
 
 Converted lon-lats can be now projected on the map. I did that on qgis with [OpenStreetMap](http://www.openstreetmap.org/) plugin providing the background map layer, and I set the points displayed as a heatmap, the final image was produced.
 
-![](img/bus-stop-location-heatmap.png)
+![](https://github.com/getAbchin/datastore/blob/master/bus-stop-and-taxi-status/img/bus-stop-location-heatmap.png?raw=true)
 
