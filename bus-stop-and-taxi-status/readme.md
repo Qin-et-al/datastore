@@ -5,7 +5,7 @@
 | 类别                                       | 下载（或右键另存为）                               | 备注        |
 | ---------------------------------------- | ---------------------------------------- | --------- |
 | [2.1 全上海公交站点经纬度](#user-content-21-全上海公交站点经纬度) | [下载](https://github.com/getAbchin/datastore/raw/master/bus-stop-and-taxi-status/data/2017-bus-stopnames-lonlat-lines-sorted.xlsx) | 站名-经纬度-线路 |
-| [2.2 外环类公交站点数量统计](#user-content-22-外环类公交站点数量统计) | [下载](https://github.com/getAbchin/datastore/raw/master/bus-stop-and-taxi-status/data/2017-bus-stops-count-in-outer-ring-shanghai.csv) |           |
+| [2.2 外环内公交站点数量统计](#user-content-22-外环内公交站点数量统计) | [下载](https://github.com/getAbchin/datastore/raw/master/bus-stop-and-taxi-status/data/2017-bus-stops-count-in-outer-ring-shanghai.csv) |           |
 | [2.3 载客/空车出租车数量统计](#user-content-23-载客空车出租车数量统计) | [下载](https://github.com/getAbchin/datastore/raw/master/bus-stop-and-taxi-status/data/20110406-210000-status-1-in-outer-ring-shanghai.csv) | 载客21:00数据 |
 |                                          | [下载](https://github.com/getAbchin/datastore/raw/master/bus-stop-and-taxi-status/data/20110406-213000-status-1-in-outer-ring-shanghai.csv) | 载客21:30数据 |
 |                                          | [下载](https://github.com/getAbchin/datastore/raw/master/bus-stop-and-taxi-status/data/20110406-220000-status-1-in-outer-ring-shanghai.csv) | 载客22:00数据 |
@@ -48,7 +48,7 @@ south_lat = 31.104
 
 包含32371条站点的序号、站名、经度、纬度和经过线路5个字段，涉及1.4万个公交站名，每个公交站名一般会对应2个以上（上下游各设一站）实体站点。外环内约有5千多个站名，对应了1万多个站点。
 
-###### 2.2 外环类公交站点数量统计
+###### 2.2 外环公交站点数量统计
 
 按照[1.2 网格划分方式](#user-content-12-网格划分方式)，将[2.1 全上海公交站点经纬度](#user-content-21-全上海公交站点经纬度)的经纬度信息按网格分组统计站点数量，csv数据第一行和第一列分别为经度和纬度，第二行第二列起为站点数量。
 
@@ -60,7 +60,7 @@ south_lat = 31.104
 
 选取了2011年4月6日，外环矩形包络面以内的出租车经纬度信息。为了真实反映夜间公交车收班后的供需关系，特别抽取了21:00至23:30每半小时的截面载客/空车车辆数。
 
-抽取方法如下，以时间截面21:30为例，选取21:29:30至21:30:30这1分钟之间的所有出租车经纬度与载客标识（0或1），对每一个出租车司机，计算这1分钟内，TA的平均经度、平均纬度、平均状态（小于0.5认为空车，反之认为载客）；然后，按照[1.2 网格划分方式](#user-content-12-网格划分方式)分别对载客状态和空车状态统计各网格的车辆数；最终得到[0. 数据下载](#user-content-0-数据下载)中提供的12个表格（载客/空车各6各时间截面），格式与[2.2 外环类公交站点数量统计](#user-content-22-外环类公交站点数量统计)一致。
+抽取方法如下，以时间截面21:30为例，选取21:29:30至21:30:30这1分钟之间的所有出租车经纬度与载客标识（0或1），对每一个出租车司机，计算这1分钟内，TA的平均经度、平均纬度、平均状态（小于0.5认为空车，反之认为载客）；然后，按照[1.2 网格划分方式](#user-content-12-网格划分方式)分别对载客状态和空车状态统计各网格的车辆数；最终得到[0. 数据下载](#user-content-0-数据下载)中提供的12个表格（载客/空车各6各时间截面），格式与[2.2 外环内公交站点数量统计](#user-content-22-外环内公交站点数量统计)一致。
 
 > 12个表格记录了供需关系的事变特征，**可按需**选择某一组时间截面的载客/空车表格做进一步分析。
 
