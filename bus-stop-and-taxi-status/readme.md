@@ -64,7 +64,7 @@ south_lat = 31.104
 
 > 12个表格记录了供需关系的事变特征，**可按需**选择某一组时间截面的载客/空车表格做进一步分析。
 
-12个表格的`imshow()`图（如下）直观显示了空车和载客出租车在时空上分布的走势。
+12个表格的`imshow()`图（如下）直观显示了空车和载客出租车在时空上分布的走势（[点击](https://github.com/getAbchin/datastore/blob/master/bus-stop-and-taxi-status/img/taxi-status-distribution.png?raw=true)查看大图）。
 
 ![](https://github.com/getAbchin/datastore/blob/master/bus-stop-and-taxi-status/img/taxi-status-distribution.png?raw=true)
 
